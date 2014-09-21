@@ -1,0 +1,5 @@
+// MediaQueries
+
+@mixin xs-breakpoint() {
+  @media (max-width: $screen-xs-max) { @content; }
+}

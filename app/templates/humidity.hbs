@@ -1,0 +1,24 @@
+
+{{google-map classNames="left-fixed-map"
+    height="100%"
+    latitude=lat longitude=lon
+    locationChanged="changeLocation"
+    markerSelected="markerSelect"
+    selectedNode=selectedFeed
+    plotPoints=mapPoints radius=radius}}
+<div class="container-fluid">
+    <div class="row">
+
+        <div class="col-xs-offset-6 col-xs-6">
+            <h1 class="text-center">Local Humidty Sensors</h1>
+            <div class="col-xs-12 col-md-9 center-col">
+                {{#each sortedContent}}
+                    {{partial "humidity-feed"}}
+                {{else}}
+                    <h3 class="text-center">No humidity feeds found</h3>
+                {{/each}}
+            </div>
+        </div>
+
+    </div>
+</div>

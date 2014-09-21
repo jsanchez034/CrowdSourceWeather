@@ -1,0 +1,23 @@
+.left-fixed-map {
+  position: fixed;
+  height: 100%;
+  width: 50%;
+  top: 0;
+  left: 0;
+}
+
+.table-row {
+  display: table;
+  table-layout: fixed;
+}
+
+.table-cell-col {
+  float: none;
+  display: table-cell;
+  vertical-align: top;
+}
+
+.center-col {
+  margin: 0 auto;
+  float: none;
+}

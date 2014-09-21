@@ -1,0 +1,81 @@
+.feed {
+
+  line-height: normal;
+  margin: 12px 0;
+
+  .feed-info-wrap {
+    background: #EEE8DA;
+    z-index: 1;
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+
+    &.feed-selected {
+      background-color: #E4E4E4;
+      z-index: 1;
+      border-radius: 5px;
+    }
+
+  }
+
+    .large-data-highlight {
+
+      @include xs-breakpoint {
+        height: 50px;
+        font-size: 20px;
+        padding-top: 4px;
+      }
+
+      font-size: 25px;
+
+      .value-percent {
+        position: relative;
+        z-index: 3;
+      }
+
+      .size-indicator-wrap {
+          @include xs-breakpoint {
+            width: 100%;
+            left: 0;
+          }
+          display: inline-block;
+          position: absolute;
+          left: 0;
+          top: 0;
+          height: 60%;
+          max-height: 55px;
+          width: 80%;
+          background: #F1F1F1;
+          z-index: 1;
+          @include border-right-radius(4px);
+        .size-indicator {
+          display: inline-block;
+          position: absolute;
+          left: 0;
+          top: 0;
+          height: 100%;
+          background: #A1E4AE;
+          z-index: 2;
+          @include border-right-radius(4px);
+        }
+      }
+
+    }
+
+    .stream-detail {
+      @include xs-breakpoint {
+        float: left;
+      }
+
+      h3 {
+        max-width: 100%;
+        margin-top: 0;
+        line-height: normal;
+        @include text-overflow();
+      }
+
+      p {
+        word-break: break-word;
+      }
+    }
+}

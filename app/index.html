@@ -11,15 +11,14 @@
 
     <link rel="stylesheet" href="assets/vendor.css">
     <link rel="stylesheet" href="assets/map-app.css">
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7PZJUtHCYhn8jPYyVtunWW7Sd6Dkz72M"></script>
   </head>
   <body>
-    <script>
-      window.MapAppENV = {{ENV}};
-      window.EmberENV = window.MapAppENV.EmberENV;
-    </script>
     <script src="assets/vendor.js"></script>
     <script src="assets/map-app.js"></script>
     <script>
+      window.MapAppENV = require('map-app/config/environment')['default'];
+      window.EmberENV = window.MapAppENV.EmberENV;
       window.MapApp = require('map-app/app')['default'].create(MapAppENV.APP);
     </script>
   </body>
